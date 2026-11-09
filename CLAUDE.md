@@ -7,3 +7,7 @@ Android compass (`com.densmac.compass`), Compose + MVVM + Hilt, minSdk 31. Desig
 - Nothing blocking on main: sensors on a HandlerThread, location on an executor, altitude on IO.
 - Test on the physical phone over adb, not an emulator (real magnetometer and vibrator).
 - `./gradlew :app:testDebugUnitTest :app:assembleDebug`
+
+## Release signing
+
+`keystore.properties` and the key are never committed. The encrypted backup and restore steps are in the private `Densmac/compass-signing` repo. Every update must be signed with that key.
